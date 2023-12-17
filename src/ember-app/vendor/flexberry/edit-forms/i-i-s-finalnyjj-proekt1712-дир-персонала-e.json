@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Дир персонала",
+  "name": "IISFinalnyjj_proekt1712ДирПерсоналаE",
+  "className": "ДирПерсоналаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+      "modelProjection": "ДирПерсоналаE"
+    }
+  ]
+}

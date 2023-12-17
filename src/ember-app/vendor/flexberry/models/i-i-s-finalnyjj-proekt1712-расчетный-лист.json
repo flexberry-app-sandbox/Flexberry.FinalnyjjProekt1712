@@ -1,0 +1,274 @@
+﻿{
+  "name": "IISFinalnyjj_proekt1712РасчетныйЛист",
+  "modelName": "i-i-s-finalnyjj-proekt1712-расчетный-лист",
+  "className": "РасчетныйЛист",
+  "nameSpace": "IIS.Finalnyjj_proekt1712",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "итогоКПеречи",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "итогоНачис",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "итогоУдержано",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отправлено",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "дирПерсонала",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "составРасчета",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-состав-расчета",
+      "inverse": "расчетныйЛист"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РасчетныйЛистE",
+      "modelName": "i-i-s-finalnyjj-proekt1712-расчетный-лист",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата составления",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "отправлено",
+          "caption": "Отправлено",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "итогоНачис",
+          "caption": "Итого начислено",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "итогоУдержано",
+          "caption": "Итого удержано",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "итогоКПеречи",
+          "caption": "Итого к перечислению",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Код",
+          "lookupValueField": "код",
+          "relationName": "ДирПерсонала",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Директор по персоналу",
+          "name": "дирПерсонала",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "СоставРасчетаE",
+          "caption": "Состав расчета",
+          "name": "составРасчета",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-состав-расчета",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасчетныйЛистL",
+      "modelName": "i-i-s-finalnyjj-proekt1712-расчетный-лист",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер док",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "отправлено",
+          "caption": "Отправлено",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "итогоНачис",
+          "caption": "Итого начис",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "итогоУдержано",
+          "caption": "Итого удержано",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "итогоКПеречи",
+          "caption": "Итого к перечи",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ДирПерсонала",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код",
+          "name": "дирПерсонала",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

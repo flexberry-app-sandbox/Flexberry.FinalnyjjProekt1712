@@ -1,0 +1,123 @@
+<h3 class="ui header">{{t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодСот
+      class=(if (v-get validationModel "кодСот" "isInvalid") "error")
+      label=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.кодСот-caption")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-кодСот=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодСот" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фамилия
+      class=(if (v-get validationModel "фамилия" "isInvalid") "error")
+      label=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.фамилия-caption")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-фамилия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фамилия" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.имя
+      class=(if (v-get validationModel "имя" "isInvalid") "error")
+      label=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.имя-caption")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-имя=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "имя" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.отчество
+      class=(if (v-get validationModel "отчество" "isInvalid") "error")
+      label=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.отчество-caption")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-отчество=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отчество" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.серияПас
+      class=(if (v-get validationModel "серияПас" "isInvalid") "error")
+      label=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.серияПас-caption")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-серияПас=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "серияПас" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерПас
+      class=(if (v-get validationModel "номерПас" "isInvalid") "error")
+      label=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.номерПас-caption")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-номерПас=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерПас" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.должности-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.должности
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="должности"
+      projection="ДолжностиL"
+      title=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.должности-caption")
+      readonly=readonly
+      componentName="должностиLookup"
+      class=(if (v-get validationModel "должности" "isInvalid") "error")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-должности=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "должности" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.отделы-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.отделы
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="отделы"
+      projection="ОтделыL"
+      title=(t "forms.i-i-s-finalnyjj-proekt1712-сотрудники-e.отделы-caption")
+      readonly=readonly
+      componentName="отделыLookup"
+      class=(if (v-get validationModel "отделы" "isInvalid") "error")
+      data-test-i-i-s-finalnyjj-proekt1712-сотрудники-e-отделы=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отделы" "message")}}
+  </div>
+</form>

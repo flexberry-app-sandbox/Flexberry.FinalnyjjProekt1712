@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-finalnyjj-proekt1712-дир-персонала-e",
+  "editForm": "i-i-s-finalnyjj-proekt1712-дир-персонала-e",
+  "external": false,
+  "caption": "Дир персонала",
+  "name": "IISFinalnyjj_proekt1712ДирПерсоналаL",
+  "className": "ДирПерсоналаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+      "modelProjection": "ДирПерсоналаL"
+    }
+  ]
+}

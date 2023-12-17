@@ -1,0 +1,106 @@
+﻿{
+  "name": "IISFinalnyjj_proekt1712ДирПерсонала",
+  "modelName": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+  "className": "ДирПерсонала",
+  "nameSpace": "IIS.Finalnyjj_proekt1712",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "код",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДирПерсоналаE",
+      "modelName": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+      "attrs": [
+        {
+          "name": "код",
+          "caption": "Код директора",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ДирПерсоналаL",
+      "modelName": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+      "attrs": [
+        {
+          "name": "код",
+          "caption": "Код директора",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

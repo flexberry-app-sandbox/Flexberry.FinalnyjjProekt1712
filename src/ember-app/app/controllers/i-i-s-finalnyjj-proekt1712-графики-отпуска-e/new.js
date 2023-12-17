@@ -1,0 +1,4 @@
+import IISFinalnyjj_proekt1712ГрафикиОтпускаEController from '../i-i-s-finalnyjj-proekt1712-графики-отпуска-e';
+
+var IISFinalnyjj_proekt1712ГрафикиОтпускаENewController = IISFinalnyjj_proekt1712ГрафикиОтпускаEController;
+export default IISFinalnyjj_proekt1712ГрафикиОтпускаENewController;

@@ -1,0 +1,4 @@
+import IISFinalnyjj_proekt1712РасчетныйЛистEController from '../i-i-s-finalnyjj-proekt1712-расчетный-лист-e';
+
+var IISFinalnyjj_proekt1712РасчетныйЛистENewController = IISFinalnyjj_proekt1712РасчетныйЛистEController;
+export default IISFinalnyjj_proekt1712РасчетныйЛистENewController;

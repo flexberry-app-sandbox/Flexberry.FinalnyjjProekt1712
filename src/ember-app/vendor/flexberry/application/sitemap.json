@@ -1,0 +1,72 @@
+﻿{
+  "applicationCaption": "Модуль КЭДО",
+  "applicationTitle": "Finalnyjj_proekt1712",
+  "items": [
+    {
+      "link": null,
+      "menuName": "кадровые-документы",
+      "caption": "Кадровые документы",
+      "title": "Кадровые документы",
+      "children": [
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-графики-отпуска-l",
+          "menuName": null,
+          "caption": "Графики отпуска",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-отделы-l",
+          "menuName": null,
+          "caption": "Отделы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-согласие-l",
+          "menuName": null,
+          "caption": "Согласие",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-дир-персонала-l",
+          "menuName": null,
+          "caption": "Дир персонала",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "зарплатные-документы",
+      "caption": "Зарплатные документы",
+      "title": "Зарплатные документы",
+      "children": [
+        {
+          "link": "i-i-s-finalnyjj-proekt1712-расчетный-лист-l",
+          "menuName": null,
+          "caption": "Расчетный лист",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

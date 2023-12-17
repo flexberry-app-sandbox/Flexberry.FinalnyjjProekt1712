@@ -1,0 +1,4 @@
+import IISFinalnyjj_proekt1712ДирПерсоналаEController from '../i-i-s-finalnyjj-proekt1712-дир-персонала-e';
+
+var IISFinalnyjj_proekt1712ДирПерсоналаENewController = IISFinalnyjj_proekt1712ДирПерсоналаEController;
+export default IISFinalnyjj_proekt1712ДирПерсоналаENewController;

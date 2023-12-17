@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-finalnyjj-proekt1712-расчетный-лист-e",
+  "editForm": "i-i-s-finalnyjj-proekt1712-расчетный-лист-e",
+  "external": false,
+  "caption": "Расчетный лист",
+  "name": "IISFinalnyjj_proekt1712РасчетныйЛистL",
+  "className": "РасчетныйЛистL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-finalnyjj-proekt1712-расчетный-лист",
+      "modelProjection": "РасчетныйЛистL"
+    }
+  ]
+}

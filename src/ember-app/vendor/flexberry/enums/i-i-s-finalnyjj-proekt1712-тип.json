@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Finalnyjj_proekt1712",
+  "className": "Тип",
+  "enumObjects": {
+    "Удержание": "Удержание",
+    "Начисление": "Начисление"
+  }
+}

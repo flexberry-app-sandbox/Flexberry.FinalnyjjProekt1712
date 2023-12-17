@@ -1,0 +1,1 @@
+docker-compose -p finalnyjj_proekt1712-java up -d

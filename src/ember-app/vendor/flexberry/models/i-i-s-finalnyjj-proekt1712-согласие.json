@@ -1,0 +1,218 @@
+﻿{
+  "name": "IISFinalnyjj_proekt1712Согласие",
+  "modelName": "i-i-s-finalnyjj-proekt1712-согласие",
+  "className": "Согласие",
+  "nameSpace": "IIS.Finalnyjj_proekt1712",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отправлено",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "подписано",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "дирПерсонала",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СогласиеE",
+      "modelName": "i-i-s-finalnyjj-proekt1712-согласие",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата составления",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "подписано",
+          "caption": "Подписано",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отправлено",
+          "caption": "Отправлено",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Код",
+          "lookupValueField": "код",
+          "relationName": "ДирПерсонала",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Директор по персоналу",
+          "name": "дирПерсонала",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "СогласиеL",
+      "modelName": "i-i-s-finalnyjj-proekt1712-согласие",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата составления",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "подписано",
+          "caption": "Подписано",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отправлено",
+          "caption": "Отправлено",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ДирПерсонала",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код",
+          "name": "дирПерсонала",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-дир-персонала",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

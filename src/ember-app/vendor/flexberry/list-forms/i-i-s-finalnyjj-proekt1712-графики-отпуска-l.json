@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-finalnyjj-proekt1712-графики-отпуска-e",
+  "editForm": "i-i-s-finalnyjj-proekt1712-графики-отпуска-e",
+  "external": false,
+  "caption": "Графики отпуска",
+  "name": "IISFinalnyjj_proekt1712ГрафикиОтпускаL",
+  "className": "ГрафикиОтпускаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-finalnyjj-proekt1712-графики-отпуска",
+      "modelProjection": "ГрафикиОтпускаL"
+    }
+  ]
+}

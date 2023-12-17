@@ -1,0 +1,260 @@
+﻿{
+  "name": "IISFinalnyjj_proekt1712Сотрудники",
+  "modelName": "i-i-s-finalnyjj-proekt1712-сотрудники",
+  "className": "Сотрудники",
+  "nameSpace": "IIS.Finalnyjj_proekt1712",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "имя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодСот",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерПас",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отчество",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "серияПас",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фамилия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "должности",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-должности",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "отделы",
+      "relatedTo": "i-i-s-finalnyjj-proekt1712-отделы",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СотрудникиE",
+      "modelName": "i-i-s-finalnyjj-proekt1712-сотрудники",
+      "attrs": [
+        {
+          "name": "кодСот",
+          "caption": "Код сотрудника",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "серияПас",
+          "caption": "Серия паспорта",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "номерПас",
+          "caption": "Номер паспорта",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Должности",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Должности",
+          "name": "должности",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-должности",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Отделы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "type": "standard",
+          "caption": "Отделы",
+          "name": "отделы",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-отделы",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "СотрудникиL",
+      "modelName": "i-i-s-finalnyjj-proekt1712-сотрудники",
+      "attrs": [
+        {
+          "name": "кодСот",
+          "caption": "Код сотрудника",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "серияПас",
+          "caption": "Серия паспорта",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "номерПас",
+          "caption": "Номер паспорта",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Должности",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "должности",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-должности",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Отделы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "отделы",
+          "relatedTo": "i-i-s-finalnyjj-proekt1712-отделы",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
